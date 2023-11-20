@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C17C68112AF2BD2700501FFA /* SelectPhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68102AF2BD2700501FFA /* SelectPhotoCoordinator.swift */; };
+		C17C68142AF2D95800501FFA /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */; };
+		C17C68162AF2E6F300501FFA /* PaintDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */; };
+		C17C681A2AF2E91500501FFA /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68192AF2E91500501FFA /* CanvasView.swift */; };
+		C17C681C2AF2F22000501FFA /* CanvasViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C681B2AF2F22000501FFA /* CanvasViewCoordinator.swift */; };
+		C1A9CA442B08288D00FCEFCB /* PinchToZoomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9CA432B08288D00FCEFCB /* PinchToZoomModifier.swift */; };
+		C1ACC4C92AFD6C1000A7EE74 /* PaintDrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACC4C82AFD6C1000A7EE74 /* PaintDrawingViewModel.swift */; };
+		C1ADA5F42AEB1F4B0035A8BA /* SelectPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADA5F32AEB1F4B0035A8BA /* SelectPhotoViewController.swift */; };
+		C1B724E12AED5EF500219006 /* OptionalModifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B724E02AED5EF500219006 /* OptionalModifierExtension.swift */; };
+		C1C42FE02B040CAE00423A14 /* LoadingOverlayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C42FDF2B040CAE00423A14 /* LoadingOverlayModifier.swift */; };
+		C1D43F7A2AF0518B00D52D35 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D43F792AF0518B00D52D35 /* ButtonView.swift */; };
+		C1D43F7C2AF0649E00D52D35 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D43F7B2AF0649E00D52D35 /* UIColor+Extension.swift */; };
+		C1D72B242AE8870E00446780 /* KolorirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B232AE8870E00446780 /* KolorirApp.swift */; };
+		C1D72B262AE8870E00446780 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B252AE8870E00446780 /* ContentView.swift */; };
+		C1D72B282AE8870F00446780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D72B272AE8870F00446780 /* Assets.xcassets */; };
+		C1D72B2B2AE8870F00446780 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D72B2A2AE8870F00446780 /* Preview Assets.xcassets */; };
+		C1D72B2D2AE8870F00446780 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B2C2AE8870F00446780 /* Persistence.swift */; };
+		C1D72B302AE8870F00446780 /* Kolorir.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */; };
+		C1F364912AF1B34E0004EFBC /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */; };
+		C1F364932AF1B4440004EFBC /* ActionButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F364922AF1B4440004EFBC /* ActionButtonStyleModifier.swift */; };
+		C1F9ABD32AE9607E00B3DC5C /* DrawingML.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1F9ABD22AE9607D00B3DC5C /* DrawingML.mlmodel */; };
+		C1F9ABD62AE9621600B3DC5C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9ABD52AE9621600B3DC5C /* HomeView.swift */; };
+		C1F9ABD92AE9623200B3DC5C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9ABD82AE9623200B3DC5C /* HomeViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C1064CA92AFAFB3F0095CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C17C68102AF2BD2700501FFA /* SelectPhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoCoordinator.swift; sourceTree = "<group>"; };
+		C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
+		C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintDrawingView.swift; sourceTree = "<group>"; };
+		C17C68192AF2E91500501FFA /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		C17C681B2AF2F22000501FFA /* CanvasViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewCoordinator.swift; sourceTree = "<group>"; };
+		C1A9CA432B08288D00FCEFCB /* PinchToZoomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchToZoomModifier.swift; sourceTree = "<group>"; };
+		C1ACC4C82AFD6C1000A7EE74 /* PaintDrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintDrawingViewModel.swift; sourceTree = "<group>"; };
+		C1ADA5F32AEB1F4B0035A8BA /* SelectPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoViewController.swift; sourceTree = "<group>"; };
+		C1B724E02AED5EF500219006 /* OptionalModifierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalModifierExtension.swift; sourceTree = "<group>"; };
+		C1C42FDF2B040CAE00423A14 /* LoadingOverlayModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlayModifier.swift; sourceTree = "<group>"; };
+		C1D43F792AF0518B00D52D35 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		C1D43F7B2AF0649E00D52D35 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C1D72B202AE8870E00446780 /* Kolorir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolorir.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D72B232AE8870E00446780 /* KolorirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolorirApp.swift; sourceTree = "<group>"; };
+		C1D72B252AE8870E00446780 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1D72B272AE8870F00446780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1D72B2A2AE8870F00446780 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1D72B2C2AE8870F00446780 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kolorir.xcdatamodel; sourceTree = "<group>"; };
+		C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		C1F364922AF1B4440004EFBC /* ActionButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyleModifier.swift; sourceTree = "<group>"; };
+		C1F9ABD22AE9607D00B3DC5C /* DrawingML.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DrawingML.mlmodel; sourceTree = "<group>"; };
+		C1F9ABD52AE9621600B3DC5C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C1F9ABD82AE9623200B3DC5C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1D72B1D2AE8870E00446780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C14B53352AEC21C100477E94 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C1D43F792AF0518B00D52D35 /* ButtonView.swift */,
+				C1D43F7D2AF069C400D52D35 /* Modifiers */,
+				C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */,
+				C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C14B53362AEC225100477E94 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C17C68122AF2C95B00501FFA /* PaintDrawing */,
+				C17C680F2AF2BCFB00501FFA /* SelectPhoto */,
+				C1F9ABD72AE9621D00B3DC5C /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C14B53372AEC22DF00477E94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9ABD22AE9607D00B3DC5C /* DrawingML.mlmodel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C17C680F2AF2BCFB00501FFA /* SelectPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				C1ADA5F32AEB1F4B0035A8BA /* SelectPhotoViewController.swift */,
+				C17C68102AF2BD2700501FFA /* SelectPhotoCoordinator.swift */,
+			);
+			path = SelectPhoto;
+			sourceTree = "<group>";
+		};
+		C17C68122AF2C95B00501FFA /* PaintDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C1ACC4C62AFD6BC100A7EE74 /* Components */,
+				C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */,
+				C1ACC4C82AFD6C1000A7EE74 /* PaintDrawingViewModel.swift */,
+			);
+			path = PaintDrawing;
+			sourceTree = "<group>";
+		};
+		C1ACC4C62AFD6BC100A7EE74 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1ACC4C72AFD6BE300A7EE74 /* CanvasView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1ACC4C72AFD6BE300A7EE74 /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				C17C681B2AF2F22000501FFA /* CanvasViewCoordinator.swift */,
+				C17C68192AF2E91500501FFA /* CanvasView.swift */,
+			);
+			path = CanvasView;
+			sourceTree = "<group>";
+		};
+		C1D43F7D2AF069C400D52D35 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C1F364922AF1B4440004EFBC /* ActionButtonStyleModifier.swift */,
+				C1C42FDF2B040CAE00423A14 /* LoadingOverlayModifier.swift */,
+				C1A9CA432B08288D00FCEFCB /* PinchToZoomModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C1D72B172AE8870E00446780 = {
+			isa = PBXGroup;
+			children = (
+				C1D72B222AE8870E00446780 /* Kolorir */,
+				C1D72B212AE8870E00446780 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1D72B212AE8870E00446780 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1D72B202AE8870E00446780 /* Kolorir.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1D72B222AE8870E00446780 /* Kolorir */ = {
+			isa = PBXGroup;
+			children = (
+				C1064CA92AFAFB3F0095CBB2 /* Info.plist */,
+				C14B53372AEC22DF00477E94 /* Resources */,
+				C1F9ABD42AE961F100B3DC5C /* View */,
+				C1F9ABD12AE95F4800B3DC5C /* Utils */,
+				C1F9ABD02AE95ED300B3DC5C /* Model */,
+				C1D72B232AE8870E00446780 /* KolorirApp.swift */,
+				C1D72B252AE8870E00446780 /* ContentView.swift */,
+				C1D72B272AE8870F00446780 /* Assets.xcassets */,
+				C1D72B2C2AE8870F00446780 /* Persistence.swift */,
+				C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */,
+				C1D72B292AE8870F00446780 /* Preview Content */,
+			);
+			path = Kolorir;
+			sourceTree = "<group>";
+		};
+		C1D72B292AE8870F00446780 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C1D72B2A2AE8870F00446780 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1F9ABD02AE95ED300B3DC5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1F9ABD12AE95F4800B3DC5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C1B724E02AED5EF500219006 /* OptionalModifierExtension.swift */,
+				C1D43F7B2AF0649E00D52D35 /* UIColor+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C1F9ABD42AE961F100B3DC5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C14B53362AEC225100477E94 /* Screens */,
+				C14B53352AEC21C100477E94 /* Shared */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1F9ABD72AE9621D00B3DC5C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9ABD52AE9621600B3DC5C /* HomeView.swift */,
+				C1F9ABD82AE9623200B3DC5C /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1D72B1F2AE8870E00446780 /* Kolorir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1D72B332AE8870F00446780 /* Build configuration list for PBXNativeTarget "Kolorir" */;
+			buildPhases = (
+				C1D72B1C2AE8870E00446780 /* Sources */,
+				C1D72B1D2AE8870E00446780 /* Frameworks */,
+				C1D72B1E2AE8870E00446780 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kolorir;
+			productName = Kolorir;
+			productReference = C1D72B202AE8870E00446780 /* Kolorir.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1D72B182AE8870E00446780 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C1D72B1F2AE8870E00446780 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C1D72B1B2AE8870E00446780 /* Build configuration list for PBXProject "Kolorir" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1D72B172AE8870E00446780;
+			productRefGroup = C1D72B212AE8870E00446780 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1D72B1F2AE8870E00446780 /* Kolorir */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1D72B1E2AE8870E00446780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D72B2B2AE8870F00446780 /* Preview Assets.xcassets in Resources */,
+				C1D72B282AE8870F00446780 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1D72B1C2AE8870E00446780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F364932AF1B4440004EFBC /* ActionButtonStyleModifier.swift in Sources */,
+				C1ADA5F42AEB1F4B0035A8BA /* SelectPhotoViewController.swift in Sources */,
+				C1F9ABD32AE9607E00B3DC5C /* DrawingML.mlmodel in Sources */,
+				C1D72B2D2AE8870F00446780 /* Persistence.swift in Sources */,
+				C1A9CA442B08288D00FCEFCB /* PinchToZoomModifier.swift in Sources */,
+				C17C68162AF2E6F300501FFA /* PaintDrawingView.swift in Sources */,
+				C1D43F7C2AF0649E00D52D35 /* UIColor+Extension.swift in Sources */,
+				C1F9ABD92AE9623200B3DC5C /* HomeViewModel.swift in Sources */,
+				C17C681C2AF2F22000501FFA /* CanvasViewCoordinator.swift in Sources */,
+				C17C68142AF2D95800501FFA /* ProgressLoadingView.swift in Sources */,
+				C1ACC4C92AFD6C1000A7EE74 /* PaintDrawingViewModel.swift in Sources */,
+				C1C42FE02B040CAE00423A14 /* LoadingOverlayModifier.swift in Sources */,
+				C1F364912AF1B34E0004EFBC /* BottomSheetView.swift in Sources */,
+				C17C68112AF2BD2700501FFA /* SelectPhotoCoordinator.swift in Sources */,
+				C1B724E12AED5EF500219006 /* OptionalModifierExtension.swift in Sources */,
+				C1D72B262AE8870E00446780 /* ContentView.swift in Sources */,
+				C1D43F7A2AF0518B00D52D35 /* ButtonView.swift in Sources */,
+				C1D72B302AE8870F00446780 /* Kolorir.xcdatamodeld in Sources */,
+				C1F9ABD62AE9621600B3DC5C /* HomeView.swift in Sources */,
+				C1D72B242AE8870E00446780 /* KolorirApp.swift in Sources */,
+				C17C681A2AF2E91500501FFA /* CanvasView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C1D72B312AE8870F00446780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1D72B322AE8870F00446780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1D72B342AE8870F00446780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kolorir/Preview Content\"";
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kolorir/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso acessar sua camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permite que salvemos seus desenhos na galeria?";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Swift.Kolorir;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1D72B352AE8870F00446780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kolorir/Preview Content\"";
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kolorir/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso acessar sua camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Permite que salvemos seus desenhos na galeria?";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Swift.Kolorir;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1D72B1B2AE8870E00446780 /* Build configuration list for PBXProject "Kolorir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D72B312AE8870F00446780 /* Debug */,
+				C1D72B322AE8870F00446780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1D72B332AE8870F00446780 /* Build configuration list for PBXNativeTarget "Kolorir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D72B342AE8870F00446780 /* Debug */,
+				C1D72B352AE8870F00446780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */,
+			);
+			currentVersion = C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */;
+			path = Kolorir.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C1D72B182AE8870E00446780 /* Project object */;
+}
