@@ -16,24 +16,27 @@ struct SelectPhotoViewController: UIViewControllerRepresentable {
     
     // MARK: PROPERTYES
     
-    @Binding var image: UIImage?
+    @ObservedObject var viewModel: HomeViewModel
     @Binding var isShown: Bool
-    
-    var sourceType: UIImagePickerController.SourceType = .camera
+    @Binding var sourceType: UIImagePickerController.SourceType
     
     // MARK: METHODS
     
     func makeCoordinator() -> SelectPhotoViewController.Coordinator {
-        return SelectPhotoCoordinator(image: $image, isShown: $isShown)
+        return SelectPhotoCoordinator(
+            isShown: $isShown,
+            viewModel: viewModel
+        )
     }
     
     func makeUIViewController(
         context: UIViewControllerRepresentableContext<SelectPhotoViewController>
     ) -> UIImagePickerController {
         let picker = UIImagePickerController()
-//        picker.cameraFlashMode = .off
-        picker.sourceType = sourceType
         picker.delegate = context.coordinator
+        picker.sourceType = sourceType
+        
+        if sourceType == .camera { picker.cameraFlashMode = .off }
         return picker
     }
     

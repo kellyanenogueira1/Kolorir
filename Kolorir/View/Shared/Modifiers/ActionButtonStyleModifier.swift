@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ActionButtonStyle: ButtonStyle {
-    var width: CGFloat = 100
+    var width: CGFloat = 200
     var height: CGFloat = 50
     var color: Color = Color.background
     

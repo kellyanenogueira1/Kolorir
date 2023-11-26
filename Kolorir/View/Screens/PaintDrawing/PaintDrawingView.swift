@@ -13,33 +13,28 @@ struct PaintDrawingView: View {
     // MARK: PROPERTYES
     
     @StateObject var viewModel = PaintDrawingViewModel()
+    @Binding var image: UIImage?
     @State private var canvasView = PKCanvasView()
     @State private var previewDrawing: PKDrawing? = nil
-    @State var image: UIImage?
-    
+   
     // MARK: UI
  
     var body: some View {
         VStack {
-            // TODO: Ajuste na estrutura do código + navegação
-//            CanvasView(canvasView: $canvasView, image: $image, onSaved: onSaved)
-            
-                Image(uiImage: viewModel.imageToDraw(image) ?? UIImage())
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .pinchToZoom()
-                    .overlay {
-                        CanvasView(canvasView: $canvasView, onSaved: onSaved)
-                            .ignoresSafeArea()
-                    }
-                    .loadingOverlay(isLoading: $viewModel.isLoading)
-            
+            CanvasView(
+                canvasView: $canvasView,
+                image: $image,
+                onSaved: onSaved
+            )
         }
+        .padding(8)
         .environmentObject(viewModel)
-        .navigationBarTitle("Kolorir")
+        .navigationTitle("Kolorir")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            Button(action: { onClearTapped()}, label: { Text("Resetar") })
-            Button(action: { onUndoTapped()}, label: { Text("Recuperar") })
+            Button(action: { onClearTapped()}) { Image(systemName: "trash.fill") }
+            Button(action: { onUndoTapped()}) { Image(systemName: "trash.slash.fill") }
+            Button(action: { saveOnPhotosAlbum()}) { Image(systemName: "bookmark.fill") }
         }
     }
     

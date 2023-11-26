@@ -12,39 +12,40 @@ struct HomeView: View {
     // MARK: PROPERTYES
     
     @StateObject var viewModel = HomeViewModel()
-    @State var showImagePicker = false
-    @State var showSheet = false
-    @State var sourceType: UIImagePickerController.SourceType = .camera
-    @State private var inputImage: UIImage?
+    
+    @State private var isImagePickerPresented = false
+    @State private var isSheetPresented = false
+    @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     // MARK: UI
     
     var body: some View {
         
         VStack {
-            Image(systemName: "camera")
+            Image(systemName: "camera") // TODO: Inserir logotipo
                 .resizable()
                 .frame(width: 300, height: 200)
                 .padding(10)
             
-            ButtonView(action: { showSheet = true })
-            
-            SelectPhotoPopUpView()
-                .offset(y: showSheet ? .zero : UIScreen.main.bounds.height)
-                .animation(.spring())
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.background)
-        .navigationTitle("Home")
-        .environmentObject(viewModel)
-        .fullScreenCover(isPresented: $showImagePicker) {
-            SelectPhotoViewController(
-                image: $inputImage,
-                isShown: $showImagePicker,
-                sourceType: self.sourceType
+            TakePhotoButtonView()
+
+            NavigationLink(
+                destination: PaintDrawingView(image: $viewModel.processedImage),
+                isActive: $viewModel.isActiveLink,
+                label: { EmptyView() }
             )
         }
-        
+        .loadingOverlay(isLoading: $viewModel.isLoading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.background)
+        .environmentObject(viewModel)
+        .sheet(isPresented: $isImagePickerPresented) {
+            SelectPhotoViewController(
+                viewModel: viewModel,
+                isShown: $isImagePickerPresented,
+                sourceType: $sourceType
+            )
+        }
     }
     
     // MARK: VIEW BUILDERS
@@ -52,21 +53,37 @@ struct HomeView: View {
     @ViewBuilder
     private func SelectPhotoPopUpView() -> some View {
         BottomSheetView(
-            title: "Selecione uma foto:",
             buttons: [
                 BottomSheetButton(title: "Câmera", action: {
-                    showSheet = false
-                    showImagePicker = true
                     sourceType = .camera
+                    isSheetPresented = false
+                    isImagePickerPresented = true
                 }),
                 BottomSheetButton(title: "Galeria", action: {
-                    showSheet = false
-                    showImagePicker = true
                     sourceType = .photoLibrary
+                    isSheetPresented = false
+                    isImagePickerPresented = true
+                    
                 })
-            ],
-            showSheet: $showSheet
+            ]
         )
+    }
+    
+    @ViewBuilder
+    private func TakePhotoButtonView() -> some View {
+        Button(action: { isSheetPresented = true }) {
+            HStack {
+                Text("Escolher foto")
+                Image(systemName: "camera.fill")
+            }
+            .foregroundColor(Color.theme)
+        }
+        .sheet(isPresented: $isSheetPresented) {
+            SelectPhotoPopUpView()
+                .presentationDetents([.fraction(0.4)])
+                .presentationDragIndicator(.hidden)
+                .presentationCornerRadius(40)
+        }.buttonStyle(ActionButtonStyle())
     }
 }
 

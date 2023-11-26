@@ -21,7 +21,6 @@ struct ProgressLoadingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background)
-//            .opacity(isLoading ? 1 : 0)
         } else {
             EmptyView()
         }

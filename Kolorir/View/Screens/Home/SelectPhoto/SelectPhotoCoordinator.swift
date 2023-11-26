@@ -11,15 +11,18 @@ import SwiftUI
 class SelectPhotoCoordinator: NSObject {
     
     // MARK: PROPERTYES
-    
-    @Binding var image: UIImage?
+
     @Binding var isShown: Bool
+    var homeViewModel: HomeViewModel
     
     // MARK: INITIALIZATION
     
-    init(image: Binding<UIImage?>, isShown: Binding<Bool>) {
-        _image = image
+    init(
+        isShown: Binding<Bool>,
+        viewModel: HomeViewModel
+    ) {
         _isShown = isShown
+        self.homeViewModel = viewModel
     }
    
 }
@@ -33,16 +36,14 @@ extension SelectPhotoCoordinator: UINavigationControllerDelegate, UIImagePickerC
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
         if let uiimage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            image = uiimage
-//            isShown = false
+            isShown = false
+            
+            Task {
+                homeViewModel.isLoading = true
+                await homeViewModel.processImage(uiimage)
+            }
         }
-        
-        picker.pushViewController(
-            UIHostingController(rootView: PaintDrawingView(image: image)),
-            animated: false
-        )
     }
-
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         isShown = false

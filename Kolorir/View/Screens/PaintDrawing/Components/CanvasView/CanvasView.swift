@@ -11,8 +11,9 @@ struct CanvasView: UIViewRepresentable {
     
     // MARK: PROPERTYES
     
+    @EnvironmentObject var viewModel: PaintDrawingViewModel
     @Binding var canvasView: PKCanvasView
-//    @Binding var image: UIImage?
+    @Binding var image: UIImage?
     @State var tool = PKToolPicker()
     let onSaved: () -> Void
     
@@ -25,19 +26,9 @@ struct CanvasView: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
         canvasView.isOpaque = false
         canvasView.backgroundColor = .clear
-        canvasView.minimumZoomScale = 0.2
-        canvasView.maximumZoomScale = 4.0
-        
-        // TODO: Zoom na imagem
-        
-//        let imageView = UIImageView(image: image ?? UIImage())
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.clipsToBounds = true
-//        
-//        let contentView = canvasView.subviews[0]
-//        contentView.addSubview(imageView)
-//        contentView.sendSubviewToBack(imageView)
-//    
+       
+        configureZoom()
+        addImageToCanvas()
         canvasView.delegate = context.coordinator
        
         #if targetEnvironment(simulator)
@@ -55,5 +46,20 @@ struct CanvasView: UIViewRepresentable {
         tool.setVisible(true, forFirstResponder: canvasView)
         tool.addObserver(canvasView)
         canvasView.becomeFirstResponder()
+    }
+    
+    private func configureZoom() {
+        canvasView.minimumZoomScale = 0.2
+        canvasView.maximumZoomScale = 4.0
+    }
+    
+    private func addImageToCanvas() {
+        let imageView = UIImageView(image: image ?? UIImage()) // TODO: Remover opcional
+        imageView.contentMode = .center
+        imageView.clipsToBounds = true
+        
+        let contentView = canvasView.subviews[0]
+        contentView.addSubview(imageView)
+        contentView.sendSubviewToBack(imageView)
     }
 }
