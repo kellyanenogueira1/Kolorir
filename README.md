@@ -1,9 +1,9 @@
 # Kolorir 🎨
 Um aplicativo de pintura utilizando SwiftUI e fundamentos de PDI (Processamento digital de imagens)
 
-Frameworks Utilizados:
+Tecnologias Utilizadas:
 
 - SwiftUI
 - CoreML
 - PencilKit
-- PhotosUI
+- MVVM

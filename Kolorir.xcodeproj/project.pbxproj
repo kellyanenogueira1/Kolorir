@@ -66,8 +66,8 @@
 		C14B53352AEC21C100477E94 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */,
 				C1D43F7D2AF069C400D52D35 /* Modifiers */,
+				C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */,
 				C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */,
 			);
 			path = Shared;
