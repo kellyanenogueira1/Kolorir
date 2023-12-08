@@ -28,7 +28,7 @@ struct HomeView: View {
                 .padding(10)
             
             TakePhotoButtonView()
-
+            
             NavigationLink(
                 destination: PaintDrawingView(image: $viewModel.processedImage),
                 isActive: $viewModel.isActiveLink,

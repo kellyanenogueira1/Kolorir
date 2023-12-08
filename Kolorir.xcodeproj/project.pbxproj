@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12409832B23B1F6003D4EDF /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12409822B23B1F6003D4EDF /* EmptyFile.swift */; };
 		C17C68112AF2BD2700501FFA /* SelectPhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68102AF2BD2700501FFA /* SelectPhotoCoordinator.swift */; };
 		C17C68142AF2D95800501FFA /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */; };
 		C17C68162AF2E6F300501FFA /* PaintDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */; };
@@ -18,11 +19,8 @@
 		C1C42FE02B040CAE00423A14 /* LoadingOverlayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C42FDF2B040CAE00423A14 /* LoadingOverlayModifier.swift */; };
 		C1D43F7C2AF0649E00D52D35 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D43F7B2AF0649E00D52D35 /* UIColor+Extension.swift */; };
 		C1D72B242AE8870E00446780 /* KolorirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B232AE8870E00446780 /* KolorirApp.swift */; };
-		C1D72B262AE8870E00446780 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B252AE8870E00446780 /* ContentView.swift */; };
 		C1D72B282AE8870F00446780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D72B272AE8870F00446780 /* Assets.xcassets */; };
 		C1D72B2B2AE8870F00446780 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D72B2A2AE8870F00446780 /* Preview Assets.xcassets */; };
-		C1D72B2D2AE8870F00446780 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B2C2AE8870F00446780 /* Persistence.swift */; };
-		C1D72B302AE8870F00446780 /* Kolorir.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */; };
 		C1F364912AF1B34E0004EFBC /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */; };
 		C1F364932AF1B4440004EFBC /* ActionButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F364922AF1B4440004EFBC /* ActionButtonStyleModifier.swift */; };
 		C1F9ABD32AE9607E00B3DC5C /* DrawingML.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1F9ABD22AE9607D00B3DC5C /* DrawingML.mlmodel */; };
@@ -32,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		C1064CA92AFAFB3F0095CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C12409822B23B1F6003D4EDF /* EmptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFile.swift; sourceTree = "<group>"; };
 		C17C68102AF2BD2700501FFA /* SelectPhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhotoCoordinator.swift; sourceTree = "<group>"; };
 		C17C68132AF2D95800501FFA /* ProgressLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 		C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintDrawingView.swift; sourceTree = "<group>"; };
@@ -44,11 +43,8 @@
 		C1D43F7B2AF0649E00D52D35 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C1D72B202AE8870E00446780 /* Kolorir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolorir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D72B232AE8870E00446780 /* KolorirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolorirApp.swift; sourceTree = "<group>"; };
-		C1D72B252AE8870E00446780 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1D72B272AE8870F00446780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1D72B2A2AE8870F00446780 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C1D72B2C2AE8870F00446780 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kolorir.xcdatamodel; sourceTree = "<group>"; };
 		C1F364902AF1B34E0004EFBC /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		C1F364922AF1B4440004EFBC /* ActionButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyleModifier.swift; sourceTree = "<group>"; };
 		C1F9ABD22AE9607D00B3DC5C /* DrawingML.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DrawingML.mlmodel; sourceTree = "<group>"; };
@@ -106,19 +102,11 @@
 		C17C68122AF2C95B00501FFA /* PaintDrawing */ = {
 			isa = PBXGroup;
 			children = (
-				C1ACC4C62AFD6BC100A7EE74 /* Components */,
+				C1ACC4C72AFD6BE300A7EE74 /* CanvasView */,
 				C17C68152AF2E6F300501FFA /* PaintDrawingView.swift */,
 				C1ACC4C82AFD6C1000A7EE74 /* PaintDrawingViewModel.swift */,
 			);
 			path = PaintDrawing;
-			sourceTree = "<group>";
-		};
-		C1ACC4C62AFD6BC100A7EE74 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				C1ACC4C72AFD6BE300A7EE74 /* CanvasView */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		C1ACC4C72AFD6BE300A7EE74 /* CanvasView */ = {
@@ -164,10 +152,7 @@
 				C1F9ABD12AE95F4800B3DC5C /* Utils */,
 				C1F9ABD02AE95ED300B3DC5C /* Model */,
 				C1D72B232AE8870E00446780 /* KolorirApp.swift */,
-				C1D72B252AE8870E00446780 /* ContentView.swift */,
 				C1D72B272AE8870F00446780 /* Assets.xcassets */,
-				C1D72B2C2AE8870F00446780 /* Persistence.swift */,
-				C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */,
 				C1D72B292AE8870F00446780 /* Preview Content */,
 			);
 			path = Kolorir;
@@ -184,6 +169,7 @@
 		C1F9ABD02AE95ED300B3DC5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C12409822B23B1F6003D4EDF /* EmptyFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,7 +275,6 @@
 				C1F364932AF1B4440004EFBC /* ActionButtonStyleModifier.swift in Sources */,
 				C1ADA5F42AEB1F4B0035A8BA /* SelectPhotoViewController.swift in Sources */,
 				C1F9ABD32AE9607E00B3DC5C /* DrawingML.mlmodel in Sources */,
-				C1D72B2D2AE8870F00446780 /* Persistence.swift in Sources */,
 				C17C68162AF2E6F300501FFA /* PaintDrawingView.swift in Sources */,
 				C1D43F7C2AF0649E00D52D35 /* UIColor+Extension.swift in Sources */,
 				C1F9ABD92AE9623200B3DC5C /* HomeViewModel.swift in Sources */,
@@ -300,11 +285,10 @@
 				C1F364912AF1B34E0004EFBC /* BottomSheetView.swift in Sources */,
 				C17C68112AF2BD2700501FFA /* SelectPhotoCoordinator.swift in Sources */,
 				C1B724E12AED5EF500219006 /* OptionalModifierExtension.swift in Sources */,
-				C1D72B262AE8870E00446780 /* ContentView.swift in Sources */,
-				C1D72B302AE8870F00446780 /* Kolorir.xcdatamodeld in Sources */,
 				C1F9ABD62AE9621600B3DC5C /* HomeView.swift in Sources */,
 				C1D72B242AE8870E00446780 /* KolorirApp.swift in Sources */,
 				C17C681A2AF2E91500501FFA /* CanvasView.swift in Sources */,
+				C12409832B23B1F6003D4EDF /* EmptyFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,19 +497,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C1D72B2E2AE8870F00446780 /* Kolorir.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */,
-			);
-			currentVersion = C1D72B2F2AE8870F00446780 /* Kolorir.xcdatamodel */;
-			path = Kolorir.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C1D72B182AE8870E00446780 /* Project object */;
 }

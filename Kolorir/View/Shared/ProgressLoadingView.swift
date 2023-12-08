@@ -16,7 +16,7 @@ struct ProgressLoadingView: View {
                 ProgressView("Carregando...")
                     .tint(Color.theme)
                     .foregroundColor(Color.theme)
-                    .background(Color.background)
+                    .background(Color.clear)
                     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -16,29 +16,59 @@ struct PaintDrawingView: View {
     @Binding var image: UIImage?
     @State private var canvasView = PKCanvasView()
     @State private var previewDrawing: PKDrawing? = nil
-   
+    @State private var shouldClear = true
+    @State private var showAlert = false
+    
     // MARK: UI
- 
+    
     var body: some View {
-        VStack {
-            CanvasView(
-                canvasView: $canvasView,
-                image: $image,
-                onSaved: onSaved
+        
+        CanvasView(
+            canvasView: $canvasView,
+            image: $image,
+            onSaved: onSaved
+        )
+        .frame(width: image?.size.width, height: image?.size.height)
+        .scaleEffect(
+            min(
+                UIScreen.main.bounds.width / (image?.size.width ?? 1), // TODO: Remover opcional
+                UIScreen.main.bounds.height / (image?.size.height ?? 1)
             )
-        }
-        .padding(8)
+        )
         .environmentObject(viewModel)
         .navigationTitle("Kolorir")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            Button(action: { onClearTapped()}) { Image(systemName: "trash.fill") }
-            Button(action: { onUndoTapped()}) { Image(systemName: "trash.slash.fill") }
-            Button(action: { saveOnPhotosAlbum()}) { Image(systemName: "bookmark.fill") }
+            let isEmptyDrawing = previewDrawing == nil
+        
+            Button(action: { clearIfNeeded()}) {
+                let iconName = shouldClear ? "clear.fill" : "arrowshape.turn.up.left.circle.fill"
+                Image(systemName: iconName)
+            }.disabled(isEmptyDrawing)
+            
+            Button(action: { saveOnPhotosAlbum() }) {
+                Image(systemName: "photo.badge.checkmark.fill")
+            }.disabled(isEmptyDrawing)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Salvo na galeria ☑️"),
+                dismissButton: .default(Text("Ok")) {
+                    showAlert = false
+                }
+            )
         }
     }
-    
     // MARK: PRIVATE METHODS
+    
+    private func clearIfNeeded() {
+        if !shouldClear {
+            onUndoTapped()
+        } else {
+            onClearTapped()
+        }
+        shouldClear.toggle()
+    }
     
     private func onClearTapped() {
         canvasView.drawing = PKDrawing()
@@ -53,20 +83,14 @@ struct PaintDrawingView: View {
     private func saveOnPhotosAlbum() {
         guard let image = image, let previewDrawing = previewDrawing else { return }
         
-        if let imagePainting = matchImages(baseImage: image, drawing: previewDrawing) {
+        if let imagePainting = viewModel.matchImages(
+            baseImage: image,
+            drawing: previewDrawing,
+            canvasTransform: canvasView.transform
+        ) {
             UIImageWriteToSavedPhotosAlbum(imagePainting, nil, nil, nil)
+            showAlert = true
         }
-    }
-    
-    private func matchImages(baseImage: UIImage, drawing: PKDrawing) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(baseImage.size, false, 0.0)
-        baseImage.draw(in: CGRect(origin: CGPoint.zero, size: baseImage.size))
-        let drawingImage = drawing.image(from: drawing.bounds, scale: UIScreen.main.scale)
-        drawingImage.draw(in: CGRect(origin: CGPoint.zero, size: baseImage.size))
-        let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return combinedImage
     }
     
     // MARK: INTERNAL METHODS

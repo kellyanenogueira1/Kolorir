@@ -20,7 +20,7 @@ class HomeViewModel: ObservableObject {
     // MARK: METHODS
     
     func processImage(_ inputImage: UIImage?) async {
-        let image = try? await applyStyleImage(inputImage)
+        let image = await applyStyleImage(inputImage)
         
         await MainActor.run {
             processedImage = image
@@ -187,7 +187,7 @@ class HomeViewModel: ObservableObject {
             let index = i * bytesPerPixel
             let pixelValue = CGFloat(pointer[index]) / 255.0
             
-            if pixelValue > 0.45 { // valor limiar
+            if pixelValue > 0.40 { // valor limiar
                 pointer[index] = 55
                 pointer[index + 1] = 55
                 pointer[index + 2] = 55

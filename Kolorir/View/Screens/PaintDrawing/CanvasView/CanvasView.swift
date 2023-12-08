@@ -55,9 +55,6 @@ struct CanvasView: UIViewRepresentable {
     
     private func addImageToCanvas() {
         let imageView = UIImageView(image: image ?? UIImage()) // TODO: Remover opcional
-        imageView.contentMode = .center
-        imageView.clipsToBounds = true
-        
         let contentView = canvasView.subviews[0]
         contentView.addSubview(imageView)
         contentView.sendSubviewToBack(imageView)
