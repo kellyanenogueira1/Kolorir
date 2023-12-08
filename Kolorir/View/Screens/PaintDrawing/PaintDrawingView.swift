@@ -22,19 +22,23 @@ struct PaintDrawingView: View {
     // MARK: UI
     
     var body: some View {
-        
-        CanvasView(
-            canvasView: $canvasView,
-            image: $image,
-            onSaved: onSaved
-        )
-        .frame(width: image?.size.width, height: image?.size.height)
-        .scaleEffect(
-            min(
-                UIScreen.main.bounds.width / (image?.size.width ?? 1), // TODO: Remover opcional
-                UIScreen.main.bounds.height / (image?.size.height ?? 1)
-            )
-        )
+       
+        VStack {
+            if let image = image {
+                CanvasView(
+                    canvasView: $canvasView,
+                    image: Binding.constant(image),
+                    onSaved: onSaved
+                )
+                .frame(width: image.size.width, height: image.size.height)
+                .scaleEffect(
+                    min(
+                        UIScreen.main.bounds.width / (image.size.width),
+                        UIScreen.main.bounds.height / (image.size.height)
+                    )
+                )
+            }
+        }
         .environmentObject(viewModel)
         .navigationTitle("Kolorir")
         .navigationBarTitleDisplayMode(.inline)

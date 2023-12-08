@@ -46,6 +46,13 @@ struct HomeView: View {
                 sourceType: $sourceType
             )
         }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Ops! 😣"),
+                message: Text("Não conseguimos processar a imagem. Por favor, tente novamente."),
+                dismissButton: .default(Text("Ok"))
+            )
+        }
     }
     
     // MARK: VIEW BUILDERS

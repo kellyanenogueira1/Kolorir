@@ -16,6 +16,7 @@ class HomeViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var processedImage: UIImage? = nil
     @Published var isActiveLink: Bool = false
+    @Published var showAlert: Bool = false
     
     // MARK: METHODS
     
@@ -23,8 +24,12 @@ class HomeViewModel: ObservableObject {
         let image = await applyStyleImage(inputImage)
         
         await MainActor.run {
-            processedImage = image
             isLoading = false
+            guard image != nil else {
+                showAlert = true
+                return
+            }
+            processedImage = image
             isActiveLink = true
         }
     }
@@ -41,7 +46,7 @@ class HomeViewModel: ObservableObject {
             else { return nil }
             return outputImage
         } catch {
-            debugPrint("Erro durante ao processar a imagem como desenho: \(error)")
+            debugPrint("Erro ao processar a imagem como desenho: \(error)")
             return nil
         }
     }
@@ -61,7 +66,7 @@ class HomeViewModel: ObservableObject {
             
             return outputImage
         } catch {
-            debugPrint("Erro durante a predição: \(error)")
+            debugPrint("Erro ao fazer predição de estilo da imagem: \(error)")
             return nil
         }
     }

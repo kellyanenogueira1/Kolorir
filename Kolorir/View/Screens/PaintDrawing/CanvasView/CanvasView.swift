@@ -13,7 +13,7 @@ struct CanvasView: UIViewRepresentable {
     
     @EnvironmentObject var viewModel: PaintDrawingViewModel
     @Binding var canvasView: PKCanvasView
-    @Binding var image: UIImage?
+    @Binding var image: UIImage
     @State var tool = PKToolPicker()
     let onSaved: () -> Void
     
@@ -54,7 +54,7 @@ struct CanvasView: UIViewRepresentable {
     }
     
     private func addImageToCanvas() {
-        let imageView = UIImageView(image: image ?? UIImage()) // TODO: Remover opcional
+        let imageView = UIImageView(image: image)
         let contentView = canvasView.subviews[0]
         contentView.addSubview(imageView)
         contentView.sendSubviewToBack(imageView)

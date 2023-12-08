@@ -36,12 +36,13 @@ extension SelectPhotoCoordinator: UINavigationControllerDelegate, UIImagePickerC
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
         if let uiimage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            isShown = false
-            
             Task {
+                isShown = false
                 homeViewModel.isLoading = true
                 await homeViewModel.processImage(uiimage)
             }
+        } else {
+            homeViewModel.showAlert = true
         }
     }
     
